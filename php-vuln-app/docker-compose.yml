@@ -1,0 +1,12 @@
+services:
+  php-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php:8.5.11-apache
+    container_name: php-lab-app
+    ports:
+      - '8080:80'
+    volumes:
+      - ./src:/var/www/html:ro
+    restart: unless-stopped
