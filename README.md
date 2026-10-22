@@ -77,7 +77,7 @@ docker compose up -d --build
 
 # 2. Test the endpoint on port 8080
 cd ..
-python exploit.py --url http://localhost:8080/index.php
+python exploit.py --url http://localhost:8080/index.php --lhost 127.0.0.1 --port 4444
 ```
 
 ---
